@@ -1,5 +1,5 @@
 package com.jpabook.jpashop.domain;
 
 public class OrderStatus {
-    ORDER, CANCEL
+    // ORDER, CANCEL
 }
