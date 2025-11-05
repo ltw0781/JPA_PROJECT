@@ -4,11 +4,12 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.test.annotation.Rollback;
 
 import com.jpabook.jpashop.entity.Member;
 
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest
 public class MemberRepositoryTest {
@@ -17,6 +18,7 @@ public class MemberRepositoryTest {
 
     @Test
     @Transactional
+    @Commit
     @Rollback(false)
     public void testMember() {
         Member member = new Member();
